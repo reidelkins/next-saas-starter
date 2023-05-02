@@ -8,13 +8,14 @@ import dynamic from 'next/dynamic';
 import Head from 'next/head';
 import { ColorModeScript } from 'nextjs-color-mode';
 import React, { PropsWithChildren } from 'react';
-import { TinaEditProvider } from 'tinacms/dist/edit-state';
+// import { TinaEditProvider } from 'tinacms/dist/edit-state';
 
+// import Chatbot from 'components/Chatbot';
 import Footer from 'components/Footer';
+import FreeListModal from 'components/FreeListModal';
 import { GlobalStyle } from 'components/GlobalStyles';
 import Navbar from 'components/Navbar';
 import NavigationDrawer from 'components/NavigationDrawer';
-import FreeListModal from 'components/FreeListModal';
 import WaveCta from 'components/WaveCta';
 import { NewsletterModalContextProvider, useNewsletterModalContext } from 'contexts/newsletter-modal.context';
 import { NavItems } from 'types';
@@ -26,7 +27,7 @@ const navItems: NavItems = [
   { title: 'Get Started', href: '/#contact', outlined: true },
 ];
 
-const TinaCMS = dynamic(() => import('tinacms'), { ssr: false });
+// const TinaCMS = dynamic(() => import('tinacms'), { ssr: false });
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -51,7 +52,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       <Providers>
         <Modals />
         <Navbar items={navItems} />
-        <TinaEditProvider
+        {/* <TinaEditProvider
           editMode={
             <TinaCMS
               query={pageProps.query}
@@ -67,7 +68,9 @@ function MyApp({ Component, pageProps }: AppProps) {
           }
         >
           <Component {...pageProps} />
-        </TinaEditProvider>
+        </TinaEditProvider> */}
+        <Component {...pageProps} />
+        {/* <Chatbot /> */}
         <WaveCta />
         <Footer />
       </Providers>
