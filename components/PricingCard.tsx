@@ -39,7 +39,10 @@ export default function PricingCard({
           <Title>{title}</Title>
           <Description>{description}</Description>
           <PriceContainer>
-            <Price>{children}</Price>
+            <Price>
+              {children}
+              {children !== '$0' && children !== '!!!' && '/Month'}
+            </Price>
             {isAnyBenefitPresent && (
               <CustomRichText>
                 <ul>
