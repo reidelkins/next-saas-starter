@@ -42,7 +42,7 @@ export default function Homepage({ posts }: InferGetStaticPropsType<typeof getSt
       <HomepageWrapper>
         <WhiteBackgroundContainer>
           <Hero />
-          <Partners />
+          {/* <Partners /> */}
           <BasicSection imageUrl="/demo-illustration-1.svg" title="My Customer Is Moving" overTitle="Listed Home For Sale">
             <p>
               Moving is one of the top three most stressful times in a humans life. Do not get lost as an after thought to your customer and
