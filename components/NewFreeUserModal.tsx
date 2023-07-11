@@ -7,7 +7,6 @@ import Button from './Button';
 import CloseIcon from './CloseIcon';
 import Container from './Container';
 import Input from './Input';
-import CompanyCreatedState from './CompanyCreatedState';
 import Overlay from './Overlay';
 
 export interface FreeListModalProps {
@@ -54,8 +53,8 @@ export default function FreeListModal({ onClose }: FreeListModalProps) {
         setHasErrored(true);
         return;
       }
-
       setHasSuccessfullyMadeCompany(true);
+      window.open('/success', '_self');
     }
   }
 
@@ -66,43 +65,40 @@ export default function FreeListModal({ onClose }: FreeListModalProps) {
           <CloseIconContainer>
             <CloseIcon onClick={onClose} />
           </CloseIconContainer>
-          {hasSuccessfullyMadecompany && <CompanyCreatedState />}
-          {!hasSuccessfullyMadecompany && (
-            <>
-              <Title>Get Free Access!</Title>
-              <CustomInput
-                value={companyName}
-                onChange={(e: React.ChangeEvent<HTMLInputElement>) => setCompanyName(e.target.value)}
-                placeholder="Enter your company's name..."
-                required
-              />
-              <CustomInput
-                value={name}
-                onChange={(e: React.ChangeEvent<HTMLInputElement>) => setName(e.target.value)}
-                placeholder="Name..."
-                required
-              />
-              <div style={{ width: '1rem' }} />
-              <CustomInput
-                value={email}
-                onChange={(e: React.ChangeEvent<HTMLInputElement>) => setEmail(e.target.value)}
-                placeholder="Email..."
-                required
-              />
-              <div style={{ width: '1rem' }} />
-              <CustomInput
-                value={phone}
-                onChange={(e: React.ChangeEvent<HTMLInputElement>) => setPhoneNumber(e.target.value)}
-                placeholder="Phone Number..."
-                required
-              />
-              <Row>
-                <CustomButton as="button" type="submit" disabled={hasSuccessfullyMadecompany}>
-                  Submit
-                </CustomButton>
-              </Row>
-            </>
-          )}
+          <>
+            <Title>Get Free Access!</Title>
+            <CustomInput
+              value={companyName}
+              onChange={(e: React.ChangeEvent<HTMLInputElement>) => setCompanyName(e.target.value)}
+              placeholder="Enter your company's name..."
+              required
+            />
+            <CustomInput
+              value={name}
+              onChange={(e: React.ChangeEvent<HTMLInputElement>) => setName(e.target.value)}
+              placeholder="Name..."
+              required
+            />
+            <div style={{ width: '1rem' }} />
+            <CustomInput
+              value={email}
+              onChange={(e: React.ChangeEvent<HTMLInputElement>) => setEmail(e.target.value)}
+              placeholder="Email..."
+              required
+            />
+            <div style={{ width: '1rem' }} />
+            <CustomInput
+              value={phone}
+              onChange={(e: React.ChangeEvent<HTMLInputElement>) => setPhoneNumber(e.target.value)}
+              placeholder="Phone Number..."
+              required
+            />
+            <Row>
+              <CustomButton as="button" type="submit" disabled={hasSuccessfullyMadecompany}>
+                Submit
+              </CustomButton>
+            </Row>
+          </>
         </Card>
       </Container>
     </Overlay>
