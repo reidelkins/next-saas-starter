@@ -27,7 +27,7 @@ export default function FreeListModal({ onClose }: FreeListModalProps) {
     event.preventDefault();
     if (email) {
       try {
-        const res = await fetch('/api/sendEmail', {
+        await fetch('/api/sendEmail', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

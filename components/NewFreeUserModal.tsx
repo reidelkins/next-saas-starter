@@ -31,7 +31,7 @@ export default function FreeListModal({ onClose }: FreeListModalProps) {
         url = 'http://127.0.0.1:8000';
       }
       try {
-        const res = await fetch(`${url}/api/v1/accounts/company/`, {
+        await fetch(`${url}/api/v1/accounts/company/`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

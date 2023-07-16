@@ -61,11 +61,12 @@ export default function SingleArticlePage(props: InferGetStaticPropsType<typeof 
   const absoluteImageUrl = imageUrl.replace(/\/+/, '/');
   return (
     <>
-      <Head>
+      {/* <Head>
         <noscript>
           <link rel="stylesheet" href="/prism-theme.css" />
         </noscript>
-      </Head>
+      </Head> */}
+      <Head />
       <OpenGraphHead slug={slug} {...meta} />
       <StructuredDataHead slug={slug} {...meta} />
       <MetadataHead {...meta} />

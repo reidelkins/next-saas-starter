@@ -1,11 +1,10 @@
 // pages/[...page].tsx
+import { BuilderComponent, builder, useIsPreviewing } from '@builder.io/react';
+import { BuilderContent } from '@builder.io/sdk';
 import { GetStaticProps } from 'next';
 import DefaultErrorPage from 'next/error';
 import Head from 'next/head';
-import { useRouter } from 'next/router';
 import React from 'react';
-import { BuilderComponent, builder, useIsPreviewing } from '@builder.io/react';
-import { BuilderContent } from '@builder.io/sdk';
 
 // Replace with your Public API Key
 builder.init('34e5ab7addbc4e688099467f709a0e5c');
