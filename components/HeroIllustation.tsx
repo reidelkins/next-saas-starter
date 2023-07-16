@@ -2,7 +2,7 @@
 import Image from 'next/image';
 
 export default function HeroIllustration() {
-  return <Image src="/heroImages/house-with-family.png" alt="Description of the image" style={{ background: 'transparent' }} />;
+  return <Image src="/heroImages/house-with-family.png" alt="Description of the image" />;
 }
 
 // const HeroImage = styled.img`
