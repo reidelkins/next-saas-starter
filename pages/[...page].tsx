@@ -1,5 +1,5 @@
 // pages/[...page].tsx
-import { BuilderComponent, builder, useIsPreviewing } from '@builder.io/react';
+import { builder, BuilderComponent, useIsPreviewing } from '@builder.io/react';
 import { BuilderContent } from '@builder.io/sdk';
 import { GetStaticProps } from 'next';
 import DefaultErrorPage from 'next/error';
