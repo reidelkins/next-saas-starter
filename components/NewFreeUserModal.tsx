@@ -20,7 +20,6 @@ export default function FreeListModal({ onClose }: FreeListModalProps) {
   const [phone, setPhoneNumber] = useState('');
 
   const [hasSuccessfullyMadecompany, setHasSuccessfullyMadeCompany] = useState(false);
-  const [hasErrored, setHasErrored] = useState(false);
 
   useEscClose({ onClose });
 
@@ -45,12 +44,12 @@ export default function FreeListModal({ onClose }: FreeListModalProps) {
           }),
         });
 
-        if (res.status !== 204) {
-          console.log(res);
-          setHasErrored(true);
-        }
+        // if (res.status !== 204) {
+        //   console.log(res);
+        //   setHasErrored(true);
+        // }
       } catch {
-        setHasErrored(true);
+        // setHasErrored(true);
         return;
       }
       setHasSuccessfullyMadeCompany(true);

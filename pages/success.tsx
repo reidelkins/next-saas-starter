@@ -1,5 +1,5 @@
-import Page from '../components/Page';
 import styled from 'styled-components';
+import Page from '../components/Page';
 
 export default function Success() {
   return (
@@ -13,6 +13,7 @@ export default function Success() {
         </CenteredText>
         <div className="flex flex-row justify-center items-center">
           <iframe
+            title="On-boarding Meeting"
             src="https://letsmeet.io/jonathanbrewster/imcm-on-boarding-call"
             style={{ minHeight: '700px', minWidth: '100%', width: '100%' }}
             name="booking"

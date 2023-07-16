@@ -3,19 +3,20 @@ import 'swiper/css/bundle';
 import 'swiper/css/navigation';
 import 'swiper/css/autoplay';
 
+import { Analytics } from '@vercel/analytics/react';
 import { AppProps } from 'next/dist/shared/lib/router/router';
 import dynamic from 'next/dynamic';
 import Head from 'next/head';
 import { ColorModeScript } from 'nextjs-color-mode';
 import React, { PropsWithChildren } from 'react';
 import { TinaEditProvider } from 'tinacms/dist/edit-state';
-import { Analytics } from '@vercel/analytics/react';
 
 import Footer from 'components/Footer';
+import FreeListModal from 'components/FreeListModal';
 import { GlobalStyle } from 'components/GlobalStyles';
 import Navbar from 'components/Navbar';
 import NavigationDrawer from 'components/NavigationDrawer';
-import FreeListModal from 'components/FreeListModal';
+
 import WaveCta from 'components/WaveCta';
 import { NewsletterModalContextProvider, useNewsletterModalContext } from 'contexts/newsletter-modal.context';
 import { NavItems } from 'types';
@@ -71,6 +72,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         {/* <!-- Google Tag Manager (noscript) --> */}
         <noscript>
           <iframe
+            title="google-tag-manager"
             src="https://www.googletagmanager.com/ns.html?id=GTM-WNZW6JN"
             height="0"
             width="0"

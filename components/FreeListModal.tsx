@@ -19,7 +19,7 @@ export default function FreeListModal({ onClose }: FreeListModalProps) {
   const [phone, setPhoneNumber] = useState('');
   const [zipCode, setZipCode] = useState('');
   const [hasSuccessfullySentMail, setHasSuccessfullySentMail] = useState(false);
-  const [hasErrored, setHasErrored] = useState(false);
+  // const [hasErrored, setHasErrored] = useState(false);
 
   useEscClose({ onClose });
 
@@ -38,11 +38,11 @@ export default function FreeListModal({ onClose }: FreeListModalProps) {
           }),
         });
 
-        if (res.status !== 204) {
-          setHasErrored(true);
-        }
+        // if (res.status !== 204) {
+        //   setHasErrored(true);
+        // }
       } catch {
-        setHasErrored(true);
+        // setHasErrored(true);
         return;
       }
 
