@@ -26,7 +26,7 @@ const navItems: NavItems = [
   { title: 'Pricing', href: '/pricing' },
   { title: 'Contact', href: '/contact' },
   { title: 'Login', href: 'https://app.ismycustomermoving.com' },
-  { title: 'Get Started', href: '/#contact', outlined: true },
+  { title: 'Book A Demo', href: '/#contact', outlined: true },
 ];
 
 const TinaCMS = dynamic(() => import('tinacms'), { ssr: false });
