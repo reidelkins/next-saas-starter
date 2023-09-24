@@ -52,6 +52,7 @@ export default class MyDocument extends Document {
           />
           <Main />
           <NextScript />
+          <script type="text/javascript" src="//static.klaviyo.com/onsite/js/klaviyo.js?company_id=QNn9Qb" />
         </body>
       </Html>
     );
