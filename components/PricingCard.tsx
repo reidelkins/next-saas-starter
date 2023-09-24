@@ -2,8 +2,8 @@ import { PropsWithChildren, useState } from 'react';
 import styled from 'styled-components';
 import { media } from 'utils/media';
 import Button from './Button';
-import RichText from './RichText';
 import NewFreeUserModal from './NewFreeUserModal';
+import RichText from './RichText';
 
 interface PricingCardProps {
   title: string;
